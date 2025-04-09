@@ -1,5 +1,4 @@
 # simple-chess-ui
-A simple chess game with a working user interface and full piece movement logic.
 
 A simple chess game with a working user interface and full piece movement logic. Built-in rules for all pieces included. Checkmate detection is not yet implemented.
 
