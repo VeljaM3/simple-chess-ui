@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title>CHESS UI</title>
+
+        <!-- Link to external CSS file for styling -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Load jQuery library -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+
+        <!-- Load custom JavaScript for game logic and interactivity -->
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <table>
+            <!-- Row 1: Black major pieces -->
+            <tr>
+                <!-- Each td represents one square on the board, alternating in color -->
+                <!-- Inside each td is a div that holds a piece, if present -->
+                <!-- data-x and data-y attributes indicate the piece's position on the board -->
+
+                <td class="white_field">
+                    <div class="field_div player_black top" data-x="1" data-y="8">
+                        <img src="img/crni_top.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black konj" data-x="2" data-y="8">
+                        <img src="img/crni_konj.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black lovac" data-x="3" data-y="8">
+                        <img src="img/crni_lovac.png">
+                    </div>  
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black dama" data-x="4" data-y="8">
+                        <img src="img/crna_dama.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black kralj" data-x="5" data-y="8">
+                        <img src="img/crni_kralj.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black lovac" data-x="6" data-y="8">
+                        <img src="img/crni_lovac.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black konj" data-x="7" data-y="8">
+                        <img src="img/crni_konj.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black top" data-x="8" data-y="8">
+                        <img src="img/crni_top.png">
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Row 2: Black pawns -->
+            <tr>
+                <!-- Each pawn has class "pesak" and is marked as belonging to the black player -->
+                <td class="black_field">
+                    <div class="field_div player_black pesak" data-x="1" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black pesak" data-x="2" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black pesak" data-x="3" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black pesak" data-x="4" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black pesak" data-x="5" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black pesak" data-x="6" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_black pesak" data-x="7" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_black pesak" data-x="8" data-y="7">
+                        <img src="img/crni_pesak.png">
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Rows 3 to 6: Empty middle of the board -->
+            <!-- Each field_div here is empty, used for moving pieces -->
+            <tr>
+                <td class="white_field"><div class="field_div" data-x="1" data-y="6"></div></td>
+                <td class="black_field"><div class="field_div" data-x="2" data-y="6"></div></td>
+                <td class="white_field"><div class="field_div" data-x="3" data-y="6"></div></td>
+                <td class="black_field"><div class="field_div" data-x="4" data-y="6"></div></td>
+                <td class="white_field"><div class="field_div" data-x="5" data-y="6"></div></td>
+                <td class="black_field"><div class="field_div" data-x="6" data-y="6"></div></td>
+                <td class="white_field"><div class="field_div" data-x="7" data-y="6"></div></td>
+                <td class="black_field"><div class="field_div" data-x="8" data-y="6"></div></td>
+            </tr>
+            <tr>
+                <td class="black_field"><div class="field_div" data-x="1" data-y="5"></div></td>
+                <td class="white_field"><div class="field_div" data-x="2" data-y="5"></div></td>
+                <td class="black_field"><div class="field_div" data-x="3" data-y="5"></div></td>
+                <td class="white_field"><div class="field_div" data-x="4" data-y="5"></div></td>
+                <td class="black_field"><div class="field_div" data-x="5" data-y="5"></div></td>
+                <td class="white_field"><div class="field_div" data-x="6" data-y="5"></div></td>
+                <td class="black_field"><div class="field_div" data-x="7" data-y="5"></div></td>
+                <td class="white_field"><div class="field_div" data-x="8" data-y="5"></div></td>
+            </tr>
+            <tr>
+                <td class="white_field"><div class="field_div" data-x="1" data-y="4"></div></td>
+                <td class="black_field"><div class="field_div" data-x="2" data-y="4"></div></td>
+                <td class="white_field"><div class="field_div" data-x="3" data-y="4"></div></td>
+                <td class="black_field"><div class="field_div" data-x="4" data-y="4"></div></td>
+                <td class="white_field"><div class="field_div" data-x="5" data-y="4"></div></td>
+                <td class="black_field"><div class="field_div" data-x="6" data-y="4"></div></td>
+                <td class="white_field"><div class="field_div" data-x="7" data-y="4"></div></td>
+                <td class="black_field"><div class="field_div" data-x="8" data-y="4"></div></td>
+            </tr>
+            <tr>
+                <td class="black_field"><div class="field_div" data-x="1" data-y="3"></div></td>
+                <td class="white_field"><div class="field_div" data-x="2" data-y="3"></div></td>
+                <td class="black_field"><div class="field_div" data-x="3" data-y="3"></div></td>
+                <td class="white_field"><div class="field_div" data-x="4" data-y="3"></div></td>
+                <td class="black_field"><div class="field_div" data-x="5" data-y="3"></div></td>
+                <td class="white_field"><div class="field_div" data-x="6" data-y="3"></div></td>
+                <td class="black_field"><div class="field_div" data-x="7" data-y="3"></div></td>
+                <td class="white_field"><div class="field_div" data-x="8" data-y="3"></div></td>
+            </tr>
+
+            <!-- Row 7: White pawns -->
+            <tr>
+                <td class="white_field">
+                    <div class="field_div player_white pesak" data-x="1" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white pesak" data-x="2" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white pesak" data-x="3" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white pesak" data-x="4" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white pesak" data-x="5" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white pesak" data-x="6" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white pesak" data-x="7" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white pesak" data-x="8" data-y="2">
+                        <img src="img/beli_pesak.png">
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Row 8: White major pieces -->
+            <tr>
+                <td class="black_field">
+                    <div class="field_div player_white top" data-x="1" data-y="1">
+                        <img src="img/beli_top.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white konj" data-x="2" data-y="1">
+                        <img src="img/beli_konj.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white lovac" data-x="3" data-y="1">
+                        <img src="img/beli_lovac.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white dama" data-x="4" data-y="1">
+                        <img src="img/bela_dama.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white kralj" data-x="5" data-y="1">
+                        <img src="img/beli_kralj.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white lovac" data-x="6" data-y="1">
+                        <img src="img/beli_lovac.png">
+                    </div>
+                </td>
+                <td class="black_field">
+                    <div class="field_div player_white konj" data-x="7" data-y="1">
+                        <img src="img/beli_konj.png">
+                    </div>
+                </td>
+                <td class="white_field">
+                    <div class="field_div player_white top" data-x="8" data-y="1">
+                        <img src="img/beli_top.png">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
